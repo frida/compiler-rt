@@ -23,7 +23,6 @@ sources = files(
     'lib/builtins/addvdi3.c',
     'lib/builtins/addvsi3.c',
     'lib/builtins/addvti3.c',
-    'lib/builtins/apple_versioning.c',
     'lib/builtins/ashldi3.c',
     'lib/builtins/ashlti3.c',
     'lib/builtins/ashrdi3.c',
