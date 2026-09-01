@@ -161,6 +161,28 @@ sources = files(
     'lib/builtins/trunctfsf2.c',
 )
 
+if host_machine.cpu_family() == 'arm'
+  sources += files(
+      'lib/builtins/arm/aeabi_cdcmp.S',
+      'lib/builtins/arm/aeabi_cdcmpeq_check_nan.c',
+      'lib/builtins/arm/aeabi_cfcmp.S',
+      'lib/builtins/arm/aeabi_cfcmpeq_check_nan.c',
+      'lib/builtins/arm/aeabi_dcmp.S',
+      'lib/builtins/arm/aeabi_div0.c',
+      'lib/builtins/arm/aeabi_drsub.c',
+      'lib/builtins/arm/aeabi_fcmp.S',
+      'lib/builtins/arm/aeabi_frsub.c',
+      'lib/builtins/arm/aeabi_idivmod.S',
+      'lib/builtins/arm/aeabi_ldivmod.S',
+      'lib/builtins/arm/aeabi_memcmp.S',
+      'lib/builtins/arm/aeabi_memcpy.S',
+      'lib/builtins/arm/aeabi_memmove.S',
+      'lib/builtins/arm/aeabi_memset.S',
+      'lib/builtins/arm/aeabi_uidivmod.S',
+      'lib/builtins/arm/aeabi_uldivmod.S',
+  )
+endif
+
 c_args = [
   '-ffreestanding',
   '-fno-builtin',
