@@ -1,5 +1,5 @@
 project('compiler-rt', 'c',
-  version: '22.1.8',
+  version: '23.1.2',
   meson_version: '>=1.1.0',
   default_options: [
     'c_std=gnu11',
